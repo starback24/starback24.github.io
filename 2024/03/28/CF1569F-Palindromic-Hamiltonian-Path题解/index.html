@@ -1,18 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><script>((function() {var callbacks = [],timeLimit = 50,open = false;setInterval(loop, 1);return {addListener: function(fn) {callbacks.push(fn);},cancleListenr: function(fn) {callbacks = callbacks.filter(function(v) {return v !== fn;});}}
-function loop() {var startTime = new Date();debugger;if (new Date() - startTime > timeLimit) {if (!open) {callbacks.forEach(function(fn) {fn.call(null);});}open = true;window.stop();alert('请......请不要看这里！');document.body.innerHTML = "";} else {open = false;}}})()).addListener(function() {window.location.reload();});</script><script>function toDevtools(){
-  let num = 0; 
-  let devtools = new Date();
-  devtools.toString = function() {
-    num++;
-    if (num > 1) {
-        alert('请......请不要看这里！')
-        window.location.href = "about:blank"
-        blast();
-    }
-  }
-  console.log('', devtools);
-}
-toDevtools();</script><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>CF1569F-Palindromic-Hamiltonian-Path题解 | starback24の笔记本</title><meta name="author" content="starback24"><meta name="copyright" content="starback24"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="更好的阅读体验 题目链接 闲话 一道牛题。 第一眼看见数据范围就会想到搜索，但是实际上判断存在哈密顿回路的时候还会用到状压… 自己做时参考了Alex_Eon的题解，这篇题解写的是大佬没写的二维。 分析 以下称选字符为染色。 除了暴搜以外没有什么感觉比较好的做法。 我们分析一下纯暴力的复杂度，从幼儿园小朋友都能想到的角度想，先给每个点染色，共有 knk^nkn 种状态，然后跑出来所有的路径，极限一点">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>CF1569F-Palindromic-Hamiltonian-Path题解 | starback24の笔记本</title><meta name="author" content="starback24"><meta name="copyright" content="starback24"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="更好的阅读体验 题目链接 闲话 一道牛题。 第一眼看见数据范围就会想到搜索，但是实际上判断存在哈密顿回路的时候还会用到状压… 自己做时参考了Alex_Eon的题解，这篇题解写的是大佬没写的二维。 分析 以下称选字符为染色。 除了暴搜以外没有什么感觉比较好的做法。 我们分析一下纯暴力的复杂度，从幼儿园小朋友都能想到的角度想，先给每个点染色，共有 knk^nkn 种状态，然后跑出来所有的路径，极限一点">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CF1569F-Palindromic-Hamiltonian-Path题解">
 <meta property="og:url" content="http://starback24.github.io/2024/03/28/CF1569F-Palindromic-Hamiltonian-Path%E9%A2%98%E8%A7%A3/index.html">

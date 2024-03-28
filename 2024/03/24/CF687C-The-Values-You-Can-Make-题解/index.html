@@ -1,18 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><script>((function() {var callbacks = [],timeLimit = 50,open = false;setInterval(loop, 1);return {addListener: function(fn) {callbacks.push(fn);},cancleListenr: function(fn) {callbacks = callbacks.filter(function(v) {return v !== fn;});}}
-function loop() {var startTime = new Date();debugger;if (new Date() - startTime > timeLimit) {if (!open) {callbacks.forEach(function(fn) {fn.call(null);});}open = true;window.stop();alert('请......请不要看这里！');document.body.innerHTML = "";} else {open = false;}}})()).addListener(function() {window.location.reload();});</script><script>function toDevtools(){
-  let num = 0; 
-  let devtools = new Date();
-  devtools.toString = function() {
-    num++;
-    if (num > 1) {
-        alert('请......请不要看这里！')
-        window.location.href = "about:blank"
-        blast();
-    }
-  }
-  console.log('', devtools);
-}
-toDevtools();</script><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>CF687C-The-Values-You-Can-Make-题解 | starback24の笔记本</title><meta name="author" content="starback24"><meta name="copyright" content="starback24"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="更好的阅读体验 题目链接 分析 首先，我们处理出 a[i]a[i]a[i] 表示能否用 ccc 表示出 iii。 显然，一个值 xxx 可以的必要不充分条件就是 a[i]&amp;a[k−i]&#x3D;1a[i]\And a[k-i]&#x3D;1a[i]&amp;a[k−i]&#x3D;1。 所以一个较显然的做法就是暴搜。 1234567891011121314151617181920212223242526void df">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>CF687C-The-Values-You-Can-Make-题解 | starback24の笔记本</title><meta name="author" content="starback24"><meta name="copyright" content="starback24"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="更好的阅读体验 题目链接 分析 首先，我们处理出 a[i]a[i]a[i] 表示能否用 ccc 表示出 iii。 显然，一个值 xxx 可以的必要不充分条件就是 a[i]&amp;a[k−i]&#x3D;1a[i]\And a[k-i]&#x3D;1a[i]&amp;a[k−i]&#x3D;1。 所以一个较显然的做法就是暴搜。 1234567891011121314151617181920212223242526void df">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CF687C-The-Values-You-Can-Make-题解">
 <meta property="og:url" content="http://starback24.github.io/2024/03/24/CF687C-The-Values-You-Can-Make-%E9%A2%98%E8%A7%A3/index.html">

@@ -1,18 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><script>((function() {var callbacks = [],timeLimit = 50,open = false;setInterval(loop, 1);return {addListener: function(fn) {callbacks.push(fn);},cancleListenr: function(fn) {callbacks = callbacks.filter(function(v) {return v !== fn;});}}
-function loop() {var startTime = new Date();debugger;if (new Date() - startTime > timeLimit) {if (!open) {callbacks.forEach(function(fn) {fn.call(null);});}open = true;window.stop();alert('请......请不要看这里！');document.body.innerHTML = "";} else {open = false;}}})()).addListener(function() {window.location.reload();});</script><script>function toDevtools(){
-  let num = 0; 
-  let devtools = new Date();
-  devtools.toString = function() {
-    num++;
-    if (num > 1) {
-        alert('请......请不要看这里！')
-        window.location.href = "about:blank"
-        blast();
-    }
-  }
-  console.log('', devtools);
-}
-toDevtools();</script><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>AT_arc171_b [ARC171B] Chmax 题解 | starback24の笔记本</title><meta name="author" content="starback24"><meta name="copyright" content="starback24"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="更好的阅读体验 题目链接 闲话 第一次场切600（虽然不经常打AT就是了） 分析 下文中提到的 B,P,AB,P,AB,P,A 均为题目中的意思。 首先可以发现，从 BBB 变为 AAA 的过程中，每个位置上的数只能变大不能变小，我们现在从右向左看 AAA ，合法情况下每个数第一次出现下标必然是这个数 ，接下来我将以第三个样例为例子阐述这一点。 12381 2 3 4 5 6 7 8（B数组）6">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>AT_arc171_b [ARC171B] Chmax 题解 | starback24の笔记本</title><meta name="author" content="starback24"><meta name="copyright" content="starback24"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="更好的阅读体验 题目链接 闲话 第一次场切600（虽然不经常打AT就是了） 分析 下文中提到的 B,P,AB,P,AB,P,A 均为题目中的意思。 首先可以发现，从 BBB 变为 AAA 的过程中，每个位置上的数只能变大不能变小，我们现在从右向左看 AAA ，合法情况下每个数第一次出现下标必然是这个数 ，接下来我将以第三个样例为例子阐述这一点。 12381 2 3 4 5 6 7 8（B数组）6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AT_arc171_b [ARC171B] Chmax 题解">
 <meta property="og:url" content="http://starback24.github.io/2024/02/05/AT-arc171-b-ARC171B-Chmax-%E9%A2%98%E8%A7%A3/index.html">

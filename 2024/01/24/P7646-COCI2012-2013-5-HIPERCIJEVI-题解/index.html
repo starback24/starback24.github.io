@@ -1,18 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><script>((function() {var callbacks = [],timeLimit = 50,open = false;setInterval(loop, 1);return {addListener: function(fn) {callbacks.push(fn);},cancleListenr: function(fn) {callbacks = callbacks.filter(function(v) {return v !== fn;});}}
-function loop() {var startTime = new Date();debugger;if (new Date() - startTime > timeLimit) {if (!open) {callbacks.forEach(function(fn) {fn.call(null);});}open = true;window.stop();alert('请......请不要看这里！');document.body.innerHTML = "";} else {open = false;}}})()).addListener(function() {window.location.reload();});</script><script>function toDevtools(){
-  let num = 0; 
-  let devtools = new Date();
-  devtools.toString = function() {
-    num++;
-    if (num > 1) {
-        alert('请......请不要看这里！')
-        window.location.href = "about:blank"
-        blast();
-    }
-  }
-  console.log('', devtools);
-}
-toDevtools();</script><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>P7646 [COCI2012-2013#5] HIPERCIJEVI 题解 | starback24の笔记本</title><meta name="author" content="starback24"><meta name="copyright" content="starback24"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="更好的阅读体验 题目链接 分析 一道最短路板子题。 首先看起来把一条管道上的每两个点之间都建一条边再做一遍最短路就过了，但是仔细一想，就算不看加边的过程，极端情况下，边的总数会达到恐怖的 N2N^2N2，这是我们无法忍受的。 这时我们换一种思路，把管道也视为一个点，在一条管道上的点全都连一条向管道的边，这时最大总边数也就是 mkmkmk，显然是可以通过的。 若建图时将每条边的长度都设为 111，原">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>P7646 [COCI2012-2013#5] HIPERCIJEVI 题解 | starback24の笔记本</title><meta name="author" content="starback24"><meta name="copyright" content="starback24"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="更好的阅读体验 题目链接 分析 一道最短路板子题。 首先看起来把一条管道上的每两个点之间都建一条边再做一遍最短路就过了，但是仔细一想，就算不看加边的过程，极端情况下，边的总数会达到恐怖的 N2N^2N2，这是我们无法忍受的。 这时我们换一种思路，把管道也视为一个点，在一条管道上的点全都连一条向管道的边，这时最大总边数也就是 mkmkmk，显然是可以通过的。 若建图时将每条边的长度都设为 111，原">
 <meta property="og:type" content="article">
 <meta property="og:title" content="P7646 [COCI2012-2013#5] HIPERCIJEVI 题解">
 <meta property="og:url" content="http://starback24.github.io/2024/01/24/P7646-COCI2012-2013-5-HIPERCIJEVI-%E9%A2%98%E8%A7%A3/index.html">
